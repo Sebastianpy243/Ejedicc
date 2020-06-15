@@ -6,3 +6,4 @@ al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divi
 divisas = {'Euro': '€', 'Dollar': '$', 'Yen': '¥'}
 divisa = input('Ingrese un tipo de divisa: ')
 print(divisas.get(divisa.title(), 'No se encuentra la divisa'))
+""" estoy probando git con este mensaje """
