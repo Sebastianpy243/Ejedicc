@@ -1,0 +1,27 @@
+"""
+Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona (por ejemplo
+nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez que se añada un nuevo dato
+imprimirse el contenido del diccionario
+
+"""
+datos = {}
+val = 'si'
+while val:
+    val = input('¿Desea agregar un dato si/no?: ')
+    if val.lower() == 'no':
+        break
+    elif val.lower()== 'si':
+        llave = input('¿Que dato desea agregar?: ')
+        datos[llave] = input('Ingrese '+ llave+ ':')
+    else:
+        print('debe escoger entre si/no')
+
+data = input('¿Desea conocer sus datos registrados si/no?: ')
+if data.lower() == 'si':
+    for i, j in datos.items():
+        print(i.title(), ':', j.title())
+    print('Gracias por usar el servicio....')
+else:
+    print('Gracias por usar el servicio....')
+
+

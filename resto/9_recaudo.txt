@@ -1,0 +1,32 @@
+"""
+Escribir un programa que gestione las facturas pendientes de cobro de una empresa. Las facturas se almacenarán en un
+diccionario donde la clave de cada factura será el número de factura y el valor el coste de la factura.
+--->El programa debe preguntar al usuario si quiere añadir una nueva factura, pagar una existente o terminar.
+--->Si desea añadir una nueva factura se preguntará por el número de factura y su coste y se añadirá al diccionario.
+--->Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario.
+--->Después de cada operación el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro.
+"""
+facturas_pendientes = {}
+val = True
+cobrada = 0
+pagado = 0
+while val:
+    print('\n¿Que desea hacer?\n\n1. Añadir una nueva factura\n2. Pagar una existente\n3. Terminar')
+    value = int(input('-->'))
+    if value == 1:
+        factura = input('Ingrese numero de la factura: ')
+        facturas_pendientes[factura] = int(input('Ingrese el costo de la factura: '))
+        cobrada += facturas_pendientes[factura]
+    elif value == 2:
+        factura = input('Ingrese numero de la factura: ')
+        pagado += facturas_pendientes.pop(factura)
+
+    elif value == 3:
+        val = False
+    else:
+        print('Escoja una opcion del menu')
+
+    print('\nSe le ha cobrado un total de = ', cobrada)
+    print('Usted ha pagado un total de = ', pagado)
+    print('Usted debe = ', (cobrada - pagado))
+
