@@ -7,3 +7,4 @@ divisas = {'Euro': '€', 'Dollar': '$', 'Yen': '¥'}
 divisa = input('Ingrese un tipo de divisa: ')
 print(divisas.get(divisa.title(), 'No se encuentra la divisa'))
 """ estoy probando git con este mensaje """
+print('Este mensaje comprueba que estamos modificando con git')
